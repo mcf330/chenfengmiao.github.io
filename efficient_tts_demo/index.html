@@ -1,0 +1,343 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <title>Audio samples from "EfficientTTS: An Efficient and High-Quality Text-to-Speech Architecture"</title>
+    <meta charset="UTF-8">
+    <title>EfficientTTS: An Efficient and High-Quality Text-to-Speech Architecture</title>
+    <style>
+        red {color: red}
+        audio {width: 250px}
+    </style>
+  </head>
+  <body>
+    <article>
+      <header>
+        <h1>Audio samples from "EfficientTTS: An Efficient and High-Quality Text-to-Speech Architecture"</h1>
+      </header>
+    </article>
+
+<!--    <p><b>Paper:</b> <a href="">arXiv</a></p>-->
+<!--    <p><b>Authors</b>: </p>-->
+
+    <div>
+      <b>Abstract:</b>
+      In this work, we address the Text-to-Speech (TTS) task by proposing a non-autoregressive architecture called EfficientTTS. Unlike the dominant non-autoregressive TTS models, which are trained with the need of external aligners, EfficientTTS optimizes all its parameters with a stable, end-to-end training procedure, while allowing for sythesizing high quality speech in a fast and efficient manner. EfficientTTS is motivated by a new monotonic alignment modeling approach (also introduced in this work), which specifies monotonic constriants to the sequence alignment with almost no increase of computation. By combining EfficientTTS with different feedforward network structures, we develop a family of TTS models, including both text-to-melspectragram and text-to-waveform networks. We experimentally show that the proposed models significantly outperform counterpart models such as Tacotron 2 and Glow-TTS in terms of speech quality, training efficiency and synthesis speed, while still producing the speeches of strong robustness and great diversity. In addition, we demonstrate that proposed approach can be easily extended to autoregressive models such as Tacotron 2. 
+    <p></p>
+    </div>
+
+    <div>Correspondence to:  Chenfeng Miao(Ping An Technology) <a href="mailto:miao_chenfeng@126.com">miao_chenfeng@126.com</a></div>
+
+    <p class="toc_title">Contents</p>
+    <div id="toc_container">
+    <ul>
+      <li><a href="#db">Experiments on Databaker Dataset</a></li>
+      <li><a href="#lj">Experiments on LJ Speech Dataset</a></li>
+      <li><a href="#sr">Speech Rate</a></li>
+    </ul>
+    </div>
+
+    <p>&nbsp;</p>
+
+    <div>
+      <a name="db"><h2>Experiments on Databaker Dataset</h2></a>
+      <hr>
+      <table>
+          <thead>
+              <tr>
+              <th>Ground-truth</th><th>GT + HiFi-GAN</th><th>EFTS-CNN + HiFi-GAN</th><th>EFTS-Flow + HiFi-GAN</th><th>EFTS-Wav</th><th>Tacotron2 + HiFi-GAN</th><th>Glow-TTS + HiFi-GAN</th>
+              </tr>
+            </thead>
+        <tbody>
+        <tr>
+           <td colspan="5"><span>1: 邓小平与撒切尔会晤.</span></td>
+        </tr>
+        <tr>
+          <td><audio controls="" preload="none"><source src="audios/databaker/gt/0.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audios/databaker/gt_mel/0.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audios/databaker/cnn/0.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audios/databaker/flow/0.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audios/databaker/ee/0.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audios/databaker/taco/0.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audios/databaker/glow-tts/0.wav"></audio></td>
+        </tr>
+        <tr>
+            <td colspan="5"><span>2:老虎幼崽与宠物犬玩耍.
+            </span></td>
+         </tr>
+        <tr>
+          <td><audio controls="" preload="none"><source src="audios/databaker/gt/1.wav"></audio></td>
+            <td><audio controls="" preload="none"><source src="audios/databaker/gt_mel/1.wav"></audio></td>
+            <td><audio controls="" preload="none"><source src="audios/databaker/cnn/1.wav"></audio></td>
+            <td><audio controls="" preload="none"><source src="audios/databaker/flow/1.wav"></audio></td>
+            <td><audio controls="" preload="none"><source src="audios/databaker/ee/1.wav"></audio></td>
+            <td><audio controls="" preload="none"><source src="audios/databaker/taco/1.wav"></audio></td>
+            <td><audio controls="" preload="none"><source src="audios/databaker/glow-tts/1.wav"></audio></td>
+        </tr>
+        <tr>
+            <td colspan="5"><span>3: 长约五尺二寸五分或以上.</span></td>
+         </tr>
+        <tr>
+          <td><audio controls="" preload="none"><source src="audios/databaker/gt/2.wav"></audio></td>
+            <td><audio controls="" preload="none"><source src="audios/databaker/gt_mel/2.wav"></audio></td>
+            <td><audio controls="" preload="none"><source src="audios/databaker/cnn/2.wav"></audio></td>
+            <td><audio controls="" preload="none"><source src="audios/databaker/flow/2.wav"></audio></td>
+            <td><audio controls="" preload="none"><source src="audios/databaker/ee/2.wav"></audio></td>
+            <td><audio controls="" preload="none"><source src="audios/databaker/taco/2.wav"></audio></td>
+            <td><audio controls="" preload="none"><source src="audios/databaker/glow-tts/2.wav"></audio></td>
+        </tr>
+        <tr>
+            <td colspan="5"><span>4: 翁凯兰防乳腺癌宣传照.</span></td>
+         </tr>
+        <tr>
+          <td><audio controls="" preload="none"><source src="audios/databaker/gt/3.wav"></audio></td>
+            <td><audio controls="" preload="none"><source src="audios/databaker/gt_mel/3.wav"></audio></td>
+            <td><audio controls="" preload="none"><source src="audios/databaker/cnn/3.wav"></audio></td>
+            <td><audio controls="" preload="none"><source src="audios/databaker/flow/3.wav"></audio></td>
+            <td><audio controls="" preload="none"><source src="audios/databaker/ee/3.wav"></audio></td>
+            <td><audio controls="" preload="none"><source src="audios/databaker/taco/3.wav"></audio></td>
+            <td><audio controls="" preload="none"><source src="audios/databaker/glow-tts/3.wav"></audio></td>
+        </tr>
+        <tr>
+          <td colspan="5"><span>5: 我回右哼哼左哼哼.</span></td>
+       </tr>
+      <tr>
+        <td><audio controls="" preload="none"><source src="audios/databaker/gt/4.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audios/databaker/gt_mel/4.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audios/databaker/cnn/4.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audios/databaker/flow/4.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audios/databaker/ee/4.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audios/databaker/taco/4.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audios/databaker/glow-tts/4.wav"></audio></td>
+      </tr>
+      <tr>
+        <td colspan="5"><span>6: 此外广本也将由少壮派掌管.</span></td>
+     </tr>
+    <tr>
+      <td><audio controls="" preload="none"><source src="audios/databaker/gt/5.wav"></audio></td>
+        <td><audio controls="" preload="none"><source src="audios/databaker/gt_mel/5.wav"></audio></td>
+        <td><audio controls="" preload="none"><source src="audios/databaker/cnn/5.wav"></audio></td>
+        <td><audio controls="" preload="none"><source src="audios/databaker/flow/5.wav"></audio></td>
+        <td><audio controls="" preload="none"><source src="audios/databaker/ee/5.wav"></audio></td>
+        <td><audio controls="" preload="none"><source src="audios/databaker/taco/5.wav"></audio></td>
+        <td><audio controls="" preload="none"><source src="audios/databaker/glow-tts/5.wav"></audio></td>
+    </tr>
+    <tr>
+      <td colspan="5"><span>7: 霍思燕露背秀乳沟性感惹火.</span></td>
+   </tr>
+  <tr>
+    <td><audio controls="" preload="none"><source src="audios/databaker/gt/6.wav"></audio></td>
+      <td><audio controls="" preload="none"><source src="audios/databaker/gt_mel/6.wav"></audio></td>
+      <td><audio controls="" preload="none"><source src="audios/databaker/cnn/6.wav"></audio></td>
+      <td><audio controls="" preload="none"><source src="audios/databaker/flow/6.wav"></audio></td>
+      <td><audio controls="" preload="none"><source src="audios/databaker/ee/6.wav"></audio></td>
+      <td><audio controls="" preload="none"><source src="audios/databaker/taco/6.wav"></audio></td>
+      <td><audio controls="" preload="none"><source src="audios/databaker/glow-tts/6.wav"></audio></td>
+  </tr>
+  <tr>
+    <td colspan="5"><span>8: 也可以给本委员反映哟.</span></td>
+ </tr>
+<tr>
+  <td><audio controls="" preload="none"><source src="audios/databaker/gt/7.wav"></audio></td>
+    <td><audio controls="" preload="none"><source src="audios/databaker/gt_mel/7.wav"></audio></td>
+    <td><audio controls="" preload="none"><source src="audios/databaker/cnn/7.wav"></audio></td>
+    <td><audio controls="" preload="none"><source src="audios/databaker/flow/7.wav"></audio></td>
+    <td><audio controls="" preload="none"><source src="audios/databaker/ee/7.wav"></audio></td>
+    <td><audio controls="" preload="none"><source src="audios/databaker/taco/7.wav"></audio></td>
+    <td><audio controls="" preload="none"><source src="audios/databaker/glow-tts/7.wav"></audio></td>
+</tr>
+<tr>
+  <td colspan="5"><span>9: 摇篮牌钙维健婴儿配方奶粉.</span></td>
+</tr>
+<tr>
+<td><audio controls="" preload="none"><source src="audios/databaker/gt/8.wav"></audio></td>
+  <td><audio controls="" preload="none"><source src="audios/databaker/gt_mel/8.wav"></audio></td>
+  <td><audio controls="" preload="none"><source src="audios/databaker/cnn/8.wav"></audio></td>
+  <td><audio controls="" preload="none"><source src="audios/databaker/flow/8.wav"></audio></td>
+  <td><audio controls="" preload="none"><source src="audios/databaker/ee/8.wav"></audio></td>
+  <td><audio controls="" preload="none"><source src="audios/databaker/taco/8.wav"></audio></td>
+  <td><audio controls="" preload="none"><source src="audios/databaker/glow-tts/8.wav"></audio></td>
+</tr>
+<tr>
+  <td colspan="5"><span>10: 阿娇与百位"鬼粉丝"狂欢.</span></td>
+</tr>
+<tr>
+<td><audio controls="" preload="none"><source src="audios/databaker/gt/9.wav"></audio></td>
+  <td><audio controls="" preload="none"><source src="audios/databaker/gt_mel/9.wav"></audio></td>
+  <td><audio controls="" preload="none"><source src="audios/databaker/cnn/9.wav"></audio></td>
+  <td><audio controls="" preload="none"><source src="audios/databaker/flow/9.wav"></audio></td>
+  <td><audio controls="" preload="none"><source src="audios/databaker/ee/9.wav"></audio></td>
+  <td><audio controls="" preload="none"><source src="audios/databaker/taco/9.wav"></audio></td>
+  <td><audio controls="" preload="none"><source src="audios/databaker/glow-tts/9.wav"></audio></td>
+</tr>
+        </tbody>
+      </table>
+    </div>
+    <br><br>
+    <div>
+        <a name="lj"><h2>Experiments on LJ Speech Dataset</h2></a>
+        <hr>
+        <table>
+            <thead>
+                <tr>
+                <th>Ground-truth</th><th>GT + HiFi-GAN</th><th>EFTS-CNN + HiFi-GAN</th><th>Tacotron2 + HiFi-GAN</th><th>Glow-TTS + HiFi-GAN</th>
+                </tr>
+              </thead>
+          <tbody>
+          <tr>
+             <td colspan="5"><span>1: especially as no more time is occupied, or cost incurred, in casting, setting, or printing beautiful letters</span></td>
+          </tr>
+          <tr>
+            <td><audio controls="" preload="none"><source src="audios/ljspeech/gt_lj/0.wav"></audio></td>
+            <td><audio controls="" preload="none"><source src="audios/ljspeech/gt_mel_lj/0.wav"></audio></td>
+            <td><audio controls="" preload="none"><source src="audios/ljspeech/efts_cnn_lj/0.wav"></audio></td>
+            <td><audio controls="" preload="none"><source src="audios/ljspeech/tacotron_lj/0.wav"></audio></td>
+            <td><audio controls="" preload="none"><source src="audios/ljspeech/glow_tts_lj/0.wav"></audio></td>
+          </tr>
+          <tr>
+              <td colspan="5"><span>2: Printing, in the only sense with which we are at present concerned, differs from most if not from all the arts and crafts represented in the Exhibition</span></td>
+           </tr>
+           <tr>
+            <td><audio controls="" preload="none"><source src="audios/ljspeech/gt_lj/1.wav"></audio></td>
+            <td><audio controls="" preload="none"><source src="audios/ljspeech/gt_mel_lj/1.wav"></audio></td>
+            <td><audio controls="" preload="none"><source src="audios/ljspeech/efts_cnn_lj/1.wav"></audio></td>
+            <td><audio controls="" preload="none"><source src="audios/ljspeech/tacotron_lj/1.wav"></audio></td>
+            <td><audio controls="" preload="none"><source src="audios/ljspeech/glow_tts_lj/1.wav"></audio></td>
+          </tr>
+          <tr>
+              <td colspan="5"><span>3: than in the same operations with ugly ones.</span></td>
+           </tr>
+           <tr>
+            <td><audio controls="" preload="none"><source src="audios/ljspeech/gt_lj/2.wav"></audio></td>
+            <td><audio controls="" preload="none"><source src="audios/ljspeech/gt_mel_lj/2.wav"></audio></td>
+            <td><audio controls="" preload="none"><source src="audios/ljspeech/efts_cnn_lj/2.wav"></audio></td>
+            <td><audio controls="" preload="none"><source src="audios/ljspeech/tacotron_lj/2.wav"></audio></td>
+            <td><audio controls="" preload="none"><source src="audios/ljspeech/glow_tts_lj/2.wav"></audio></td>
+          </tr>
+          <tr>
+            <td colspan="5"><span>4: And it was a matter of course that in the Middle Ages, when the craftsmen took care that beautiful form should always be a part of their productions whatever they were,</span></td>
+         </tr>
+         <tr>
+          <td><audio controls="" preload="none"><source src="audios/ljspeech/gt_lj/3.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audios/ljspeech/gt_mel_lj/3.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audios/ljspeech/efts_cnn_lj/3.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audios/ljspeech/tacotron_lj/3.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audios/ljspeech/glow_tts_lj/3.wav"></audio></td>
+        </tr>
+        <tr>
+          <td colspan="5"><span>5: that the forms of printed letters should follow more or less closely those of the written character, and they followed them very closely.</span></td>
+       </tr>
+       <tr>
+        <td><audio controls="" preload="none"><source src="audios/ljspeech/gt_lj/4.wav"></audio></td>
+        <td><audio controls="" preload="none"><source src="audios/ljspeech/gt_mel_lj/4.wav"></audio></td>
+        <td><audio controls="" preload="none"><source src="audios/ljspeech/efts_cnn_lj/4.wav"></audio></td>
+        <td><audio controls="" preload="none"><source src="audios/ljspeech/tacotron_lj/4.wav"></audio></td>
+        <td><audio controls="" preload="none"><source src="audios/ljspeech/glow_tts_lj/4.wav"></audio></td>
+      </tr>
+      <tr>
+        <td colspan="5"><span>6: The first books were printed in black letter, i.e. the letter which was a Gothic development of the ancient Roman character,</span></td>
+     </tr>
+     <tr>
+      <td><audio controls="" preload="none"><source src="audios/ljspeech/gt_lj/5.wav"></audio></td>
+      <td><audio controls="" preload="none"><source src="audios/ljspeech/gt_mel_lj/5.wav"></audio></td>
+      <td><audio controls="" preload="none"><source src="audios/ljspeech/efts_cnn_lj/5.wav"></audio></td>
+      <td><audio controls="" preload="none"><source src="audios/ljspeech/tacotron_lj/5.wav"></audio></td>
+      <td><audio controls="" preload="none"><source src="audios/ljspeech/glow_tts_lj/5.wav"></audio></td>
+    </tr>
+    <tr>
+      <td colspan="5"><span>7: |The earliest book printed with movable type, the aforesaid Gutenberg Bible, is printed in letters which are an exact imitation</span></td>
+   </tr>
+   <tr>
+    <td><audio controls="" preload="none"><source src="audios/ljspeech/gt_lj/6.wav"></audio></td>
+    <td><audio controls="" preload="none"><source src="audios/ljspeech/gt_mel_lj/6.wav"></audio></td>
+    <td><audio controls="" preload="none"><source src="audios/ljspeech/efts_cnn_lj/6.wav"></audio></td>
+    <td><audio controls="" preload="none"><source src="audios/ljspeech/tacotron_lj/6.wav"></audio></td>
+    <td><audio controls="" preload="none"><source src="audios/ljspeech/glow_tts_lj/6.wav"></audio></td>
+  </tr>
+  <tr>
+    <td colspan="5"><span>8: But the first Bible actually dated (which also was printed at Maintz by Peter Schoeffer in the year 1462)</span></td>
+ </tr>
+ <tr>
+  <td><audio controls="" preload="none"><source src="audios/ljspeech/gt_lj/7.wav"></audio></td>
+  <td><audio controls="" preload="none"><source src="audios/ljspeech/gt_mel_lj/7.wav"></audio></td>
+  <td><audio controls="" preload="none"><source src="audios/ljspeech/efts_cnn_lj/7.wav"></audio></td>
+  <td><audio controls="" preload="none"><source src="audios/ljspeech/tacotron_lj/7.wav"></audio></td>
+  <td><audio controls="" preload="none"><source src="audios/ljspeech/glow_tts_lj/7.wav"></audio></td>
+</tr>
+<tr>
+  <td colspan="5"><span>9: produced the block books, which were the immediate predecessors of the true printed book,</span></td>
+</tr>
+<tr>
+<td><audio controls="" preload="none"><source src="audios/ljspeech/gt_lj/8.wav"></audio></td>
+<td><audio controls="" preload="none"><source src="audios/ljspeech/gt_mel_lj/8.wav"></audio></td>
+<td><audio controls="" preload="none"><source src="audios/ljspeech/efts_cnn_lj/8.wav"></audio></td>
+<td><audio controls="" preload="none"><source src="audios/ljspeech/tacotron_lj/8.wav"></audio></td>
+<td><audio controls="" preload="none"><source src="audios/ljspeech/glow_tts_lj/8.wav"></audio></td>
+</tr>
+<tr>
+  <td colspan="5"><span>10: the earliest book printed with movable types, the Gutenberg, or "forty-two line Bible" of about 1455,</span></td>
+</tr>
+<tr>
+<td><audio controls="" preload="none"><source src="audios/ljspeech/gt_lj/9.wav"></audio></td>
+<td><audio controls="" preload="none"><source src="audios/ljspeech/gt_mel_lj/9.wav"></audio></td>
+<td><audio controls="" preload="none"><source src="audios/ljspeech/efts_cnn_lj/9.wav"></audio></td>
+<td><audio controls="" preload="none"><source src="audios/ljspeech/tacotron_lj/9.wav"></audio></td>
+<td><audio controls="" preload="none"><source src="audios/ljspeech/glow_tts_lj/9.wav"></audio></td>
+</tr>
+          </tbody>
+        </table>
+      </div>
+    <br><br>
+    <div>
+      <a name="sr"><h2>Speech Rate</h2></a>
+      <hr>
+      <table>
+          <thead>
+              <tr>
+              <th> s = 0.8 </th><th>s = 0.9</th><th>s = 1.0</th><th> s = 1.1</th><th> s = 1.2</th>
+              </tr>
+            </thead>
+        <tbody>
+        <tr>
+           <td colspan="5"><span>1: 宝马配挂跛骡鞍,貂蝉怨枕董翁榻.</span></td>
+        </tr>
+        <tr>
+          <td><audio controls="" preload="none"><source src="audios/speechrate/1/80.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audios/speechrate/1/90.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audios/speechrate/1/100.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audios/speechrate/1/110.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audios/speechrate/1/120.wav"></audio></td>
+        </tr>
+        <tr>
+            <td colspan="5"><span>2: 云雾有时宛如玉带平卧峰峦山涧,有时炊烟袅绕,薄雾轻旋.</span></td>
+         </tr>
+         <tr>
+          <td><audio controls="" preload="none"><source src="audios/speechrate/2/80.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audios/speechrate/2/90.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audios/speechrate/2/100.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audios/speechrate/2/110.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audios/speechrate/2/120.wav"></audio></td>
+        </tr>
+        <tr>
+            <td colspan="5"><span>3: 霞浦县牙城镇乌岐,瓦窑村水位猛涨.</span></td>
+         </tr>
+         <tr>
+          <td><audio controls="" preload="none"><source src="audios/speechrate/3/80.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audios/speechrate/3/90.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audios/speechrate/3/100.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audios/speechrate/3/110.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audios/speechrate/3/120.wav"></audio></td>
+        </tr>
+        <tr>
+            <td colspan="5"><span>4: 卡尔普陪外孙玩滑梯.</span></td>
+         </tr>
+         <tr>
+          <td><audio controls="" preload="none"><source src="audios/speechrate/4/80.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audios/speechrate/4/90.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audios/speechrate/4/100.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audios/speechrate/4/110.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audios/speechrate/4/120.wav"></audio></td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+    <br><br>
+</body></html>
